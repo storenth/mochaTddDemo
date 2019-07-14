@@ -23,3 +23,26 @@ Some tests require a fourth phase called **teardown**. This step makes your test
 * An *expressive* test is easy to read and descriptive, making it useful as a form of documentation for your implementation code. One way to make a test more expressive is clarifying its **verify** phase — the step where expected outcome is compared to actual outcome.
 * If you need to compare the values within two objects, you can use `assert.deepEqual()`. This method compares the values of each object using loose (==) equality.
 * Learn more about assertion https://nodejs.org/api/assert.html
+* You will next test that implementation function throws an error if its argument is not a valid argument (less than 0 or greater, or not string as input value, etc.). Test both **bounds** (boundary values) to make your test suite complete. Test each bound in a separate `it` block to make it *maintainable*.
+*  https://mochajs.org/#hooks 
+```
+describe('hooks', function() {
+  before(function() {
+    // runs before all tests in this block
+  });
+
+  after(function() {
+    // runs after all tests in this block
+  });
+
+  beforeEach(function() {
+    // runs before each test in this block
+  });
+
+  afterEach(function() {
+    // runs after each test in this block
+  });
+
+  // test cases
+});
+```
