@@ -3,7 +3,7 @@ const Rooster = require('../index');
 
 describe('Roaster', () => {
   describe('.announceDawn', () => {
-  	it('returns a rooster call', () => {
+    it('returns a rooster call', () => {
       // setup
       const expected = 'moo!';
       // exercise
@@ -11,34 +11,33 @@ describe('Roaster', () => {
       // verify
       assert.strictEqual(actual, expected);
     });
-	});
+  });
   describe('.timeAtDawn', () => {
     it('returns its argument as a string', () => {
-      // setup
+      // Setup
       const expected = '4';
       const testData = 4;
-      // exercise
+      // Exercise
       const actual = Rooster.timeAtDawn(testData);
-      // verify
+      // Verify
       assert.strictEqual(actual, expected);
     });
-        it('throws an error if passed a number less than 0', () => {
-      // setup
+    it('throws an error if passed a number less than 0', () => {
+      // Setup
       const testData = -1;
-      // exercise
-      
-      // verify
-      assert.throws(() =>{
+      // Exercise
+
+      // Verify
+      assert.throws(() => {
         Rooster.timeAtDawn(testData);
       }, RangeError);
     });
-        it('throws an error if passed a number grater than 23', () => {
-      // setup
+    it('throws an error if passed a number grater than 23', () => {
+      // Setup
       const testData = 24;
-      // exercise
-      
-      // verify
-      assert.throws(() =>{
+      // Exercise
+      // Verify
+      assert.throws(() => {
         Rooster.timeAtDawn(testData);
       }, RangeError);
     });

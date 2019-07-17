@@ -46,3 +46,8 @@ describe('hooks', function() {
   // test cases
 });
 ```
+* Test-driven development (TDD) is a programming technique where you write test code before implementation code. Test code is written to define the desired behavior of your program. The test output provides descriptive error messages that inform the implementation of your program. In TDD we react to the error messages by continually re-writing our implementation code so it behaves in the way that our test specifies. **The Red-Green-Refactor Cycle**
+![Alt text](./red-green-refactor-tdd.png "Red-Green-Refactor")
+* **Edge Case**
+Now that we have written and refactored a few tests, it’s time to consider edge cases.
+An edge case is a problem or situation that occurs only at an extreme (maximum or minimum) operating parameter — you can think of these as special cases that you need to account for like not expected input variables.
