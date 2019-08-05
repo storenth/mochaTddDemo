@@ -3,7 +3,8 @@ const findNextSquare = (sq) => {
   if (typeof sq == 'number' && Number.isInteger(sq) && sq > 0) {
     if (sq === 1) {
       return sq;
-    } else {
+    }
+    else {
       let operand = Math.sqrt(sq);
       if (Number.isInteger(operand)) {
         return sq;

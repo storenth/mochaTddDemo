@@ -12,11 +12,15 @@ docker pull alpine
 ```
 docker images
 ```
-* Run container with specified image. The combination of the `-i` and `-t` switches gives you interactive shell access into the container. Try fix DNS problems to replace container's `/ect/resolv.conf` with `--dns`
+* Run container with specified image. The combination of the `-i` and `-t` switches gives you interactive shell access into the container. Try fix DNS problems to replace container's `/ect/resolv.conf` with `--dns`, `-rm` mean remove container after when exit
 ```
-docker run --dns=8.8.8.8 -it alpine
+docker run --dns=8.8.8.8 -it --rm alpine
 ```
 * You can also build Images from a `Dockerfile`, which lets you automate the installation of software in a new image. Prepare DNS settings like `sudo nano /var/snap/docker/current/config/daemon.json` with `"dns": ["127.0.0.1", "8.8.8.8"]` string.
+* Share data with host
+```
+-v ~/outpur:/output
+```
 * check status and log docker as snap package:
 ```
 sudo snap services docker.dockerd
@@ -33,8 +37,10 @@ sudo snap start docker.dockerd
 ```
 sudo docker build -t storenth/mocha-image-demo .
 ```
-* check ports Linux used
+* check ports Linux, check networks and routs on each container/host
 ```
+netstat -ie
+netstat -re
 netstat -lntu
 ```
 * Run Docker image in container
@@ -51,3 +57,21 @@ sudo docker logs %CONTAINERID%
 ```
 sudo docker container rm  $(sudo docker container ps -a -q)
 ```
+* Orchestrate Docker related containers with Installing and using `Docker Compose`: We'll check the current release and if necessary, update it in the command below
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+-- chenge permissons
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+* Create `docker-compose.yml` and run it
+```
+sudo docker-compose up
+```
+* Build image from `docker-compose.yml` and then up all dependend images in containers
+```
+docker-compose -f ~/hello_world/docker-compose.yml build
+docker-compose -f ~/hello_world/docker-compose.yml up -d
+```
+
