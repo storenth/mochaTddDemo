@@ -1,5 +1,5 @@
 const assert = require('assert');
-const Rooster = require('../rooster');
+const Rooster = require('../public/rooster');
 
 describe('Roaster', () => {
   describe('.announceDawn', () => {

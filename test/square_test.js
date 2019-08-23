@@ -1,4 +1,4 @@
-const findNextSquare = require('../square');
+const findNextSquare = require('../public/square');
 const assert = require('assert');
 
 describe('Square', () => {

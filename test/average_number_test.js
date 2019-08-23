@@ -1,4 +1,4 @@
-const find_average = require('../average_number');
+const find_average = require('../public/average_number');
 const assert = require('assert');
 
 
@@ -58,10 +58,19 @@ describe('find_average()', () => {
             // Verify
             assert.strictEqual(actual, expected);
         });
-        it('returns 10.666666666666666 when array [1,21,10]', () => {
+        it('returns 2.2 when array [1.1, 2.2, 3.3]', () => {
             // Setup
-            const inputValue = [1, 21, 10];
-            const expected = 10.666666666666666;
+            const inputValue = [1.1, 2.2, 3.3];
+            const expected = 2.1999999999999997;
+            // Exersice
+            let actual = find_average(inputValue);
+            // Verify
+            assert.strictEqual(actual, expected);
+        });
+        it('returns 243 when array [0o363, 0o363, 0o363]', () => {
+            // Setup
+            const inputValue = [0o363, 0o363, 0o363];
+            const expected = 243;
             // Exersice
             let actual = find_average(inputValue);
             // Verify
