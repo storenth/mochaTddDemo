@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "mocha test/**/*_test.js",
-    "coverage": "nyc --reporter=html npm test"
+    "coverage": "nyc --reporter=text npm test"
   },
   "author": "storenth",
   "license": "ISC",

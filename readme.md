@@ -1,7 +1,7 @@
 ### About
-Collection of classic math and JS problems solved using TDD approach. 
+Collection of classic math and JS problems solved using TDD. 
 ### Contribute
-Since I mastering JS using described approach, some unit-tests fails, so you can collaborate using pull requests with refactoring and algorithm performance optimization. It would be great if you add new challange problem, but try to cover source with `TDD` and `JSDoc` first. Suck or you have any question, just let me know. 
+Since I mastering JS using described approach, some unit-tests fails, so you can collaborate using pull requests with refactoring and algorithm performance optimization of the existing implemetation. It would be great if you add new challange problem, but try to cover source with `TDD` and `JSDoc` first. Suck or you have any question, just let me know. 
 ### Docker
 Project contain many features related to `Docker` in appropriate files. For example [Dockerfile](https://github.com/storenth/mochaTddDemo/blob/master/Dockerfile) shows how to wrap tests into container and run it on any linux based node.
 ### Getting started
