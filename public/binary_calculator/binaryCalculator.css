@@ -1,0 +1,37 @@
+body {
+    width: 33%;
+}
+
+/* Output area */
+#res {
+    height: 48px;
+    background-color: lightgray;
+    border: solid;
+    font-size: 20px;
+}
+
+/* Style for 'buttonClass' elements inside a 'buttonContainer' 
+
+    We can think of the '>' combinator as a sort of binary operator:
+    the syntax 'parent > child' specifies that we're selecting ONLY 
+    elements of type 'child' that are within elements of type 'parent'. 
+*/
+.buttonContainer > .buttonClass {
+    width: 25%;
+    height: 36px;
+    font-size: 18px;
+    margin: 0%;
+    float: left;
+}
+#btn0, #btn1 {
+    background-color: lightgreen;
+    color: brown;
+}
+#btnClr, #btnEql {
+    background-color: darkgreen;
+    color: white;
+}
+#btnSum, #btnSub, #btnMul, #btnDiv {
+    background-color: black;
+    color: red;
+}
