@@ -16,4 +16,5 @@ function find_average(array) {
   }
   throw new TypeError('Array value are not number.');
 }
+// console.log(find_average(0));
 module.exports = find_average;

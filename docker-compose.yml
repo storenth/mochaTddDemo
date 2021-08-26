@@ -1,3 +1,5 @@
+version: '3'
+
 services:
   selenium:
     image: selenium/standalone-chrome
@@ -8,7 +10,6 @@ services:
   mocha:
     build: .
     container_name: mocha-tests
-    user: ${USER_ID}
     network_mode: host
     volumes:
-     - ./test/output:./test/output
+      - ./test/output:./test/output

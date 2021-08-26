@@ -11,8 +11,9 @@
     "puppeteer"
   ],
   "scripts": {
+    "start": "node ./public/node_server_api/app.js",
     "test": "mocha test/**/*_test.js",
-    "coverage": "nyc --reporter=text npm test"
+    "coverage": "nyc npm test"
   },
   "author": "Kirill Zhdanov <storenth.catena@gmail.com>",
   "license": "ISC",
@@ -25,7 +26,9 @@
   },
   "devDependencies": {
     "mocha": "^6.1.4",
-    "nyc": "^14.1.1"
+    "nyc": "^14.1.1",
+    "puppeteer": "1.19.0",
+    "puppeteer-to-istanbul": "^1.2.2"
   },
   "nyc": {
     "all": true
